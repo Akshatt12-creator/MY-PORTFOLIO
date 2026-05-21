@@ -269,7 +269,6 @@ button {
   button,
   input,
   textarea,
-  .swiper-pagination-bullet,
   .project-card,
   .cert-card,
   .skill-list span {
@@ -930,6 +929,11 @@ body.dark-theme .theme-toggle__moon {
   margin-top: .7rem;
 }
 
+.project-card p {
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
 .timeline__item ul {
   display: grid;
   gap: .45rem;
@@ -937,57 +941,21 @@ body.dark-theme .theme-toggle__moon {
   margin: 1rem 0 0 1.1rem;
 }
 
-.project-swiper {
-  padding: .5rem .25rem 4.7rem;
+.project-grid {
+  position: relative;
 }
 
-.project-swiper__nav {
-  align-items: center;
-  bottom: 1.35rem;
-  display: flex;
-  gap: .75rem;
-  justify-content: center;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  z-index: 3;
-}
-
-.project-swiper__button {
-  align-items: center;
-  backdrop-filter: blur(14px);
-  background: var(--glass-surface), var(--container-color);
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  box-shadow: 0 14px 34px var(--shadow-color);
-  color: var(--title-color);
-  display: inline-flex;
-  font-size: 1.25rem;
-  height: 46px;
-  justify-content: center;
-  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
-  width: 46px;
-}
-
-.project-swiper__button:hover,
-.project-swiper__button:focus-visible {
-  background: linear-gradient(135deg, var(--first-color), var(--cyan-color));
-  border-color: transparent;
-  color: #fff;
-  outline: 0;
-  transform: translateY(-3px);
-}
-
-.project-swiper__button.swiper-button-disabled {
-  cursor: not-allowed;
-  opacity: .45;
+.project-grid__wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  min-height: 500px;
-  padding: 1.35rem;
+  min-height: 0;
+  padding: 1rem;
   transform-style: preserve-3d;
 }
 
@@ -1016,21 +984,26 @@ body.dark-theme .theme-toggle__moon {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   display: inline-flex;
-  height: 58px;
+  height: 48px;
   justify-content: center;
-  margin-bottom: 1.2rem;
-  width: 58px;
+  margin-bottom: .85rem;
+  width: 48px;
+}
+
+.project-card h3 {
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
 .project-card__tags {
   margin-top: auto;
-  padding-top: 1.25rem;
+  padding-top: .85rem;
 }
 
 .project-card__actions {
   display: flex;
   gap: .7rem;
-  margin-top: 1.2rem;
+  margin-top: .9rem;
 }
 
 .project-card__actions a {
@@ -1051,10 +1024,6 @@ body.dark-theme .theme-toggle__moon {
   background: var(--first-color);
   color: #fff;
   transform: translateY(-3px);
-}
-
-.swiper-pagination-bullet {
-  background: var(--first-color);
 }
 
 .cert__container {
@@ -1410,6 +1379,10 @@ body.dark-theme .theme-toggle__moon {
 
   .skills__container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .project-grid__wrapper {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .skill-group:nth-child(2),

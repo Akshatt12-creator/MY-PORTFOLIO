@@ -146,7 +146,6 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach((section) => observer.observe(section));
 
 const canUseGamingCursor = window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
-  !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
   gamingCursor &&
   gamingCursorTrail;
 
@@ -156,7 +155,7 @@ if (canUseGamingCursor) {
   let trailX = cursorX;
   let trailY = cursorY;
 
-  const interactiveSelector = "a, button, input, textarea, .project-card, .cert-card, .skill-list span, .swiper-pagination-bullet";
+  const interactiveSelector = "a, button, input, textarea, .project-card, .cert-card, .skill-list span";
 
   const renderGamingCursor = () => {
     trailX += (cursorX - trailX) * .16;
@@ -172,7 +171,8 @@ if (canUseGamingCursor) {
     cursorY = event.clientY;
     gamingCursor.classList.add("is-visible");
     gamingCursorTrail.classList.add("is-visible");
-    document.body.classList.toggle("cursor-hover", Boolean(event.target.closest(interactiveSelector)));
+    const hoveredElement = event.target instanceof Element ? event.target.closest(interactiveSelector) : null;
+    document.body.classList.toggle("cursor-hover", Boolean(hoveredElement));
   }, { passive: true });
 
   window.addEventListener("pointerdown", () => {
@@ -231,32 +231,6 @@ if (window.anime) {
     direction: "alternate",
     easing: "easeInOutSine",
     loop: true
-  });
-}
-
-if (window.Swiper) {
-  new Swiper(".project-swiper", {
-    loop: true,
-    grabCursor: true,
-    centeredSlides: false,
-    spaceBetween: 18,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".project-swiper__button--next",
-      prevEl: ".project-swiper__button--prev"
-    },
-    autoplay: {
-      delay: 4200,
-      disableOnInteraction: false
-    },
-    breakpoints: {
-      576: { slidesPerView: 1.25 },
-      768: { slidesPerView: 2 },
-      992: { slidesPerView: 3 }
-    }
   });
 }
 
