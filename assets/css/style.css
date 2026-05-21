@@ -255,17 +255,132 @@ button {
   position: absolute;
 }
 
-.cursor-glow {
-  background: radial-gradient(circle, hsla(var(--hue), 66%, 60%, .24), transparent 65%);
-  border-radius: 50%;
-  height: 240px;
-  left: 0;
-  pointer-events: none;
-  position: fixed;
-  top: 0;
-  transform: translate(-50%, -50%);
-  width: 240px;
-  z-index: 0;
+.gaming-cursor,
+.gaming-cursor__trail {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  .swiper-pagination-bullet,
+  .project-card,
+  .cert-card,
+  .skill-list span {
+    cursor: none;
+  }
+
+  .gaming-cursor,
+  .gaming-cursor__trail {
+    display: block;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    z-index: 300;
+  }
+
+  .gaming-cursor {
+    height: 38px;
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0);
+    transition: opacity .2s ease, filter var(--transition);
+    width: 38px;
+  }
+
+  .gaming-cursor.is-visible {
+    opacity: 1;
+  }
+
+  .gaming-cursor__ring {
+    animation: cursorSpin 3.4s linear infinite;
+    border: 1px solid var(--first-color);
+    border-left-color: var(--cyan-color);
+    border-radius: 50%;
+    box-shadow:
+      0 0 18px hsla(var(--hue), 66%, 60%, .48),
+      inset 0 0 14px hsla(var(--hue), 66%, 60%, .2);
+    inset: 0;
+    position: absolute;
+    transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  }
+
+  .gaming-cursor__dot {
+    background: var(--cyan-color);
+    border-radius: 50%;
+    box-shadow: 0 0 16px var(--cyan-color);
+    height: 6px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+  }
+
+  .gaming-cursor__cross {
+    background: linear-gradient(90deg, transparent, var(--first-color), transparent);
+    border-radius: 999px;
+    left: 50%;
+    opacity: .68;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity var(--transition), width var(--transition);
+  }
+
+  .gaming-cursor__cross--x {
+    height: 1px;
+    width: 58px;
+  }
+
+  .gaming-cursor__cross--y {
+    height: 58px;
+    width: 1px;
+  }
+
+  .gaming-cursor__trail {
+    background: radial-gradient(circle, hsla(var(--hue), 66%, 60%, .24), hsla(var(--hue), 66%, 60%, .08) 34%, transparent 68%);
+    border-radius: 50%;
+    filter: blur(4px);
+    height: 160px;
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0);
+    transition: opacity .2s ease;
+    width: 160px;
+    z-index: 1;
+  }
+
+  .gaming-cursor__trail.is-visible {
+    opacity: 1;
+  }
+
+  body.cursor-hover .gaming-cursor {
+    filter: saturate(1.35);
+  }
+
+  body.cursor-hover .gaming-cursor__ring {
+    border-color: var(--cyan-color);
+    box-shadow:
+      0 0 24px hsla(var(--hue), 66%, 60%, .62),
+      0 0 42px hsla(calc(var(--hue) + 46), 82%, 58%, .28),
+      inset 0 0 18px hsla(var(--hue), 66%, 60%, .28);
+    transform: scale(1.38);
+  }
+
+  body.cursor-hover .gaming-cursor__cross {
+    opacity: .28;
+    width: 36px;
+  }
+
+  body.cursor-click .gaming-cursor__ring {
+    animation: cursorClick .34s ease;
+  }
 }
 
 .progress-bar {
@@ -1188,6 +1303,16 @@ body.dark-theme .theme-toggle__moon {
 
 @keyframes scanMap {
   to { left: 115%; }
+}
+
+@keyframes cursorSpin {
+  to { transform: rotate(1turn); }
+}
+
+@keyframes cursorClick {
+  0% { transform: scale(1); }
+  45% { transform: scale(.72); }
+  100% { transform: scale(1.28); }
 }
 
 @media screen and (max-width: 991px) {

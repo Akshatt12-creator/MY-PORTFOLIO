@@ -6,7 +6,8 @@ const navToggle = $("#nav-toggle");
 const navLinks = $$(".nav__link");
 const header = $("#header");
 const progressBar = $("#progress-bar");
-const cursorGlow = $("#cursor-glow");
+const gamingCursor = $("#gaming-cursor");
+const gamingCursorTrail = $("#gaming-cursor-trail");
 const themeToggle = $("#theme-toggle");
 const loader = $("#loader");
 const contactForm = $("#contact-form");
@@ -144,10 +145,55 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => observer.observe(section));
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+const canUseGamingCursor = window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches &&
+  gamingCursor &&
+  gamingCursorTrail;
+
+if (canUseGamingCursor) {
+  let cursorX = window.innerWidth / 2;
+  let cursorY = window.innerHeight / 2;
+  let trailX = cursorX;
+  let trailY = cursorY;
+
+  const interactiveSelector = "a, button, input, textarea, .project-card, .cert-card, .skill-list span, .swiper-pagination-bullet";
+
+  const renderGamingCursor = () => {
+    trailX += (cursorX - trailX) * .16;
+    trailY += (cursorY - trailY) * .16;
+
+    gamingCursor.style.transform = `translate3d(${cursorX - 19}px, ${cursorY - 19}px, 0)`;
+    gamingCursorTrail.style.transform = `translate3d(${trailX - 80}px, ${trailY - 80}px, 0)`;
+    requestAnimationFrame(renderGamingCursor);
+  };
+
   window.addEventListener("pointermove", (event) => {
-    cursorGlow.style.transform = `translate(${event.clientX - 120}px, ${event.clientY - 120}px)`;
+    cursorX = event.clientX;
+    cursorY = event.clientY;
+    gamingCursor.classList.add("is-visible");
+    gamingCursorTrail.classList.add("is-visible");
+    document.body.classList.toggle("cursor-hover", Boolean(event.target.closest(interactiveSelector)));
   }, { passive: true });
+
+  window.addEventListener("pointerdown", () => {
+    document.body.classList.add("cursor-click");
+  });
+
+  window.addEventListener("pointerup", () => {
+    window.setTimeout(() => document.body.classList.remove("cursor-click"), 120);
+  });
+
+  document.addEventListener("mouseleave", () => {
+    gamingCursor.classList.remove("is-visible");
+    gamingCursorTrail.classList.remove("is-visible");
+  });
+
+  document.addEventListener("mouseenter", () => {
+    gamingCursor.classList.add("is-visible");
+    gamingCursorTrail.classList.add("is-visible");
+  });
+
+  renderGamingCursor();
 }
 
 const particles = $("#particles");
