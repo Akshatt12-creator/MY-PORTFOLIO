@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Akshat Choudhary portfolio: AI engineer, full stack developer, startup builder, and creative tech creator." />
+    <meta name="theme-color" content="#7960e8" />
+    <title>Akshat Choudhary | AI Engineer & Startup Builder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-hidden="true">
+      <div class="loader__orb"></div>
+      <span>Akshat.OS</span>
+    </div>
+
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+    <div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
+
+    <header class="header" id="header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a href="#home" class="nav__logo" aria-label="Akshat Choudhary home">
+          <span>A</span> Akshat
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="#home" class="nav__link active-link">Home</a></li>
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#experience" class="nav__link">Experience</a></li>
+            <li><a href="#projects" class="nav__link">Projects</a></li>
+            <li><a href="#certifications" class="nav__link">Certifications</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="ri-sun-line theme-toggle__sun"></i>
+            <i class="ri-moon-line theme-toggle__moon"></i>
+          </button>
+          <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero__noise"></div>
+        <div class="hero__blob hero__blob--one"></div>
+        <div class="hero__blob hero__blob--two"></div>
+        <div class="hero__particles" id="particles"></div>
+
+        <svg class="hero__morph" viewBox="0 0 600 600" aria-hidden="true">
+          <path id="morph-shape" d="M423.5 95.5C484.5 135.1 527.2 203.8 518.6 268.6C510.1 333.4 450.2 394.4 387.9 441.5C325.6 488.7 260.8 522.1 201.3 500.3C141.8 478.6 87.5 401.7 70.8 321.2C54.1 240.7 75 156.5 128.2 108.8C181.4 61.1 266.9 50 339.9 60.5C412.9 71 362.5 55.9 423.5 95.5Z" />
+        </svg>
+
+        <div class="hero__container container grid">
+          <div class="hero__content">
+            <span class="section__badge">Open to AI + product roles</span>
+            <h1 class="hero__title">Hi, I'm Akshat Choudhary</h1>
+            <p class="hero__subtitle">Software Engineer • Full Stack Developer • AI Engineer • Startup Mind</p>
+            <p class="hero__typing">Building <span id="typed"></span></p>
+            <p class="hero__description">
+              Final-year CSE student at VIT Vellore building AI systems, scalable products, and creator-friendly technology with a founder's bias for shipping.
+            </p>
+
+            <div class="hero__buttons">
+              <a href="#about" class="button button--primary magnetic"><span>About me</span></a>
+              <a href="https://drive.google.com/file/d/1J61RDq0_6Q4cnn2ekfd00R3qIqL63f5I/view?usp=drive_link" class="button magnetic" target="_blank" rel="noreferrer"><span>Download Resume</span></a>
+              <a href="#contact" class="button magnetic">Contact Me</a>
+            </div>
+
+            <div class="hero__social" aria-label="Social links">
+              <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="ri-github-line"></i></a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></a>
+              <a href="mailto:333chaudharyakshat@gmail.com" aria-label="Email"><i class="ri-mail-line"></i></a>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <div class="hero__frame">
+              <img src="assets/img/PORTFOLIO-PROFILE2.jpg" alt="Akshat Choudhary futuristic avatar" loading="eager" />
+            </div>
+            <div class="hero__card hero__card--top">
+              <i class="ri-brain-line"></i>
+              <span>NLP + GenAI</span>
+            </div>
+            <div class="hero__card hero__card--bottom">
+              <i class="ri-rocket-2-line"></i>
+              <span>Startup Minded</span>
+            </div>
+            <i class="ri-code-s-slash-line floating-icon floating-icon--one"></i>
+            <i class="ri-database-2-line floating-icon floating-icon--two"></i>
+            <i class="ri-openai-fill floating-icon floating-icon--three"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__badge">About Me</span>
+            <h2 class="section__title">Building AI-driven systems & scalable products</h2>
+            <span class="section__line"></span>
+          </div>
+
+          <div class="about__container grid">
+            <div class="about__story glass">
+              <p>
+                I'm Akshat, a final-year Computer Science Engineering student at VIT Vellore with a strong base in Data Structures & Algorithms, backend systems, and AI-driven applications.
+              </p>
+              <p>
+                I build full-stack platforms and apply NLP models to real-world datasets, from 250K+ tweet analytics to generative AI systems for creators. My work sits at the intersection of engineering, product clarity, and storytelling.
+              </p>
+              <p>
+                As Public Relations Head at KalkiNi, an AI surveillance startup, I led AI-focused content, PR campaigns, and hackathon communication while simplifying complex AI concepts for a wider audience.
+              </p>
+              <div class="about__badges">
+                <span>DSA</span><span>System Design Basics</span><span>NLP Systems</span><span>Generative AI</span><span>Product Thinking</span>
+              </div>
+            </div>
+
+            <div class="about__stats grid">
+              <article class="stat glass"><h3>250K+</h3><p>Tweets Processed</p></article>
+              <article class="stat glass"><h3>400+</h3><p>Hackathon Participants Managed</p></article>
+              <article class="stat glass"><h3>5+</h3><p>AI / Full Stack Projects</p></article>
+              <article class="stat glass"><h3>8.4</h3><p>Current CGPA</p></article>
+            </div>
+          </div>
+
+          <div class="education grid">
+            <article class="education__card glass">
+              <i class="ri-graduation-cap-line"></i>
+              <div>
+                <h3>VIT Vellore</h3>
+                <p>B.Tech Computer Science Engineering • 2026 • CGPA 8.4</p>
+              </div>
+            </article>
+            <article class="education__card glass">
+              <i class="ri-school-line"></i>
+              <div>
+                <h3>Delhi Public School, Ruby Park</h3>
+                <p>Higher Secondary: 86.8% • Secondary: 91.6%</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section" id="skills">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__badge">Skills</span>
+            <h2 class="section__title">A practical stack for AI products that ship</h2>
+            <span class="section__line"></span>
+          </div>
+
+          <div class="skills__container grid">
+            <article class="skill-group glass">
+              <h3><i class="ri-code-box-line"></i> Languages</h3>
+              <p>Comfortable building both algorithmic solutions and production-facing app logic.</p>
+              <div class="skill-list">
+                <span><i class="ri-java-line"></i>Java</span><span><i class="ri-python-line"></i>Python</span><span><i class="ri-database-line"></i>SQL</span><span><i class="ri-javascript-line"></i>JavaScript</span>
+              </div>
+            </article>
+            <article class="skill-group glass">
+              <h3><i class="ri-brain-line"></i> AI / ML</h3>
+              <p>Applied NLP and ML experience across sentiment analytics, prediction systems, and generative storytelling workflows.</p>
+              <div class="skill-list">
+                <span><i class="ri-chat-smile-2-line"></i>NLP</span><span><i class="ri-cpu-line"></i>BERT</span><span><i class="ri-hugging-face-line"></i>HuggingFace</span><span><i class="ri-links-line"></i>LangChain</span><span><i class="ri-line-chart-line"></i>Scikit-learn</span><span><i class="ri-table-line"></i>Pandas</span><span><i class="ri-function-line"></i>NumPy</span>
+              </div>
+            </article>
+            <article class="skill-group glass">
+              <h3><i class="ri-server-line"></i> Backend</h3>
+              <p>Focused on clean APIs, matching logic, database-backed workflows, and scalable product foundations.</p>
+              <div class="skill-list">
+                <span><i class="ri-speed-up-line"></i>FastAPI</span><span><i class="ri-plug-line"></i>REST APIs</span><span><i class="ri-node-tree"></i>System Design Basics</span>
+              </div>
+            </article>
+            <article class="skill-group glass">
+              <h3><i class="ri-layout-4-line"></i> Frontend</h3>
+              <p>Builds responsive, interaction-friendly interfaces for dashboards, platforms, and creator tools.</p>
+              <div class="skill-list">
+                <span><i class="ri-html5-line"></i>HTML</span><span><i class="ri-css3-line"></i>CSS</span><span><i class="ri-javascript-line"></i>JavaScript</span><span><i class="ri-palette-line"></i>Material UI</span>
+              </div>
+            </article>
+            <article class="skill-group glass">
+              <h3><i class="ri-database-2-line"></i> Databases & Core CS</h3>
+              <p>Grounded in CS fundamentals for building reliable, maintainable systems.</p>
+              <div class="skill-list">
+                <span><i class="ri-database-line"></i>MySQL</span><span><i class="ri-leaf-line"></i>MongoDB</span><span><i class="ri-git-branch-line"></i>DSA</span><span><i class="ri-hard-drive-2-line"></i>DBMS</span><span><i class="ri-computer-line"></i>OS</span><span><i class="ri-router-line"></i>CN</span><span><i class="ri-box-3-line"></i>OOPs</span>
+              </div>
+            </article>
+            <article class="skill-group glass">
+              <h3><i class="ri-tools-line"></i> Cloud / Tools</h3>
+              <p>Uses cloud and developer tooling to move from idea to tested prototype quickly.</p>
+              <div class="skill-list">
+                <span><i class="ri-cloud-line"></i>Google Cloud Platform</span><span><i class="ri-git-branch-line"></i>Git</span><span><i class="ri-github-line"></i>GitHub</span><span><i class="ri-terminal-box-line"></i>VS Code</span><span><i class="ri-code-line"></i>IntelliJ</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience section" id="experience">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__badge">Experience</span>
+            <h2 class="section__title">Startup storytelling meets AI execution</h2>
+            <span class="section__line"></span>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline__item glass">
+              <span class="timeline__dot"></span>
+              <div class="timeline__meta">KalkiNi • AI Surveillance Startup • Nov 2024 - Jun 2025</div>
+              <h3>Public Relations Head</h3>
+              <p>Led public-facing communication for an AI surveillance startup, blending growth strategy, technical storytelling, and community engagement.</p>
+              <ul>
+                <li>Led LinkedIn growth strategy using AI-focused content marketing.</li>
+                <li>Managed PR campaigns and organized a national hackathon with 400+ participants.</li>
+                <li>Simplified complex AI concepts into engaging content for wider audience reach.</li>
+              </ul>
+            </article>
+            <article class="timeline__item glass">
+              <span class="timeline__dot"></span>
+              <div class="timeline__meta">Independent Projects</div>
+              <h3>AI + Full Stack Builder</h3>
+              <p>Shipping end-to-end systems across NLP analytics, ride matching, generative storytelling, creator collaboration, and ML prediction pipelines with a product-first mindset.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__badge">Projects</span>
+            <h2 class="section__title">Startup product showcases powered by AI</h2>
+            <span class="section__line"></span>
+          </div>
+
+          <div class="swiper project-swiper">
+            <div class="swiper-wrapper">
+              <article class="project-card swiper-slide glass">
+                <div class="project-card__icon"><i class="ri-twitter-x-line"></i></div>
+                <h3>AI-Powered Twitter Sentiment & Trend Analytics Dashboard</h3>
+                <p>Processed 250K+ tweets using BERT and TextBlob for sentiment classification and trend extraction. Built a real-time Streamlit + Plotly dashboard with domain-wise insights and multi-domain classification across finance, tech, and more.</p>
+                <div class="project-card__tags"><span>Python</span><span>BERT</span><span>TextBlob</span><span>Pandas</span><span>Plotly</span><span>Streamlit</span></div>
+                <div class="project-card__actions"><a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub repository"><i class="ri-github-line"></i></a><a href="mailto:333chaudharyakshat@gmail.com?subject=Twitter%20Sentiment%20Dashboard%20Demo" aria-label="Request live demo"><i class="ri-external-link-line"></i></a></div>
+              </article>
+              <article class="project-card swiper-slide glass">
+                <div class="project-card__icon"><i class="ri-taxi-line"></i></div>
+                <h3>RideMate — Cab Sharing Platform</h3>
+                <p>Built a full-stack cab-sharing platform with intelligent ride matching and real-time chat. Implemented backend matching logic and user coordination features to optimize ride allocation.</p>
+                <div class="project-card__tags"><span>Java</span><span>MongoDB</span><span>JavaScript</span><span>Material UI</span><span>Matching Logic</span></div>
+                <div class="project-card__actions"><a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub repository"><i class="ri-github-line"></i></a><a href="mailto:333chaudharyakshat@gmail.com?subject=RideMate%20Demo" aria-label="Request live demo"><i class="ri-external-link-line"></i></a></div>
+              </article>
+              <article class="project-card swiper-slide glass">
+                <div class="project-card__icon"><i class="ri-ghost-line"></i></div>
+                <h3>HorrorScript — AI Horror Story Generator</h3>
+                <p>Developed a generative AI tool that automatically creates structured horror story scripts. Engineered narrative workflows for eerie, engaging stories useful in digital content production and film pre-visualization.</p>
+                <div class="project-card__tags"><span>Generative AI</span><span>Python</span><span>Storytelling</span><span>Content Workflow</span></div>
+                <div class="project-card__actions"><a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub repository"><i class="ri-github-line"></i></a><a href="https://drive.google.com/file/d/122NoGe0eRtMRU64Z9AT0UXdfbDqlbvIC/view?usp=drive_link" target="_blank" rel="noreferrer" aria-label="Live demo"><i class="ri-external-link-line"></i></a></div>
+              </article>
+              <article class="project-card swiper-slide glass">
+                <div class="project-card__icon"><i class="ri-group-line"></i></div>
+                <h3>Creator Chariot</h3>
+                <p>Capstone project: a creator-centric platform for collaboration, content ideation, and growth optimization. Integrated AI-driven insights to improve content performance and engagement strategies with a scalable backend and responsive frontend.</p>
+                <div class="project-card__tags"><span>Full Stack</span><span>AI Integration</span><span>MongoDB</span><span>JavaScript</span><span>Creators</span></div>
+                <div class="project-card__actions"><a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub repository"><i class="ri-github-line"></i></a><a href="https://drive.google.com/file/d/1vQcEhSP5cVUklBis1GXKSP6bs4Mlnvyo/view?usp=drive_link" target="_blank" rel="noreferrer" aria-label="Live demo"><i class="ri-external-link-line"></i></a></div>
+              </article>
+              <article class="project-card swiper-slide glass">
+                <div class="project-card__icon"><i class="ri-graduation-cap-line"></i></div>
+                <h3>Student Performance Prediction System</h3>
+                <p>Developed an end-to-end ML pipeline covering preprocessing, feature engineering, modeling, and evaluation. Achieved an R² score of 0.89 using Random Forest to improve prediction accuracy.</p>
+                <div class="project-card__tags"><span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Random Forest</span><span>R² 0.89</span></div>
+                <div class="project-card__actions"><a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub repository"><i class="ri-github-line"></i></a><a href="mailto:333chaudharyakshat@gmail.com?subject=Student%20Performance%20Prediction%20Demo" aria-label="Request live demo"><i class="ri-external-link-line"></i></a></div>
+              </article>
+            </div>
+            <div class="project-swiper__nav" aria-label="Project carousel controls">
+              <button class="project-swiper__button project-swiper__button--prev" type="button" aria-label="Previous project">
+                <i class="ri-arrow-left-line"></i>
+              </button>
+              <button class="project-swiper__button project-swiper__button--next" type="button" aria-label="Next project">
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="certifications section" id="certifications">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__badge">Certifications</span>
+            <h2 class="section__title">Signals of cloud, AI, and creative execution</h2>
+            <span class="section__line"></span>
+          </div>
+
+          <div class="cert__container grid">
+            <article class="cert-card glass tilt"><i class="ri-quill-pen-line"></i><h3>AI HorrorScript Certificate</h3><p>Credential for building a generative AI horror-story workflow focused on structured scripts, creator use cases, and narrative automation.</p><a href="https://drive.google.com/file/d/1NCSbRlq8lebPf0E08Lbw4dzsNWI81tbx/view?usp=drive_link" target="_blank" rel="noreferrer">View Certificate <i class="ri-arrow-right-up-line"></i></a></article>
+            <article class="cert-card glass tilt"><i class="ri-cloud-line"></i><h3>IBM SkillsBuild - Journey to Cloud</h3><p>Cloud fundamentals credential covering modern infrastructure concepts and the foundations needed to reason about scalable cloud-backed products.</p><a href="https://www.credly.com/earner/earned/badge/513142e1-6989-4be4-80b9-4f2c6e7d6397" target="_blank" rel="noreferrer">View Certificate <i class="ri-arrow-right-up-line"></i></a></article>
+            <article class="cert-card glass tilt"><i class="ri-google-line"></i><h3>Google Cloud Generative AI by SmartInternz</h3><p>Applied GenAI certification covering AI concepts, cloud-based workflows, and practical thinking for building AI-enabled applications.</p><a href="https://skillwallet.smartinternz.com/guided_projects/certificates/e069ea4c9c233d36ff9c7f329bc08ff1" target="_blank" rel="noreferrer">View Certificate <i class="ri-arrow-right-up-line"></i></a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__badge">Contact</span>
+            <h2 class="section__title">Let's build something sharp, useful, and memorable</h2>
+            <span class="section__line"></span>
+          </div>
+
+          <div class="contact__container grid">
+            <div class="contact__info glass">
+              <div class="contact__map" aria-hidden="true"></div>
+              <a href="mailto:333chaudharyakshat@gmail.com" class="contact__row"><i class="ri-mail-line"></i><span>333chaudharyakshat@gmail.com</span></a>
+              <a href="tel:+919831714093" class="contact__row"><i class="ri-phone-line"></i><span>+91-9831714093</span></a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" class="contact__row"><i class="ri-linkedin-box-line"></i><span>LinkedIn</span></a>
+              <a href="https://github.com/" target="_blank" rel="noreferrer" class="contact__row"><i class="ri-github-line"></i><span>GitHub</span></a>
+              <div class="contact__row"><i class="ri-map-pin-line"></i><span>Kolkata, India</span></div>
+            </div>
+
+            <form class="contact__form glass" id="contact-form">
+              <label class="form__field">
+                <input type="text" name="from_name" autocomplete="name" required placeholder=" " />
+                <span>Name</span>
+              </label>
+              <label class="form__field">
+                <input type="email" name="from_email" autocomplete="email" required placeholder=" " />
+                <span>Email</span>
+              </label>
+              <label class="form__field form__field--area">
+                <textarea name="message" required placeholder=" "></textarea>
+                <span>Message</span>
+              </label>
+              <button type="submit" class="button button--primary magnetic contact__button" id="contact-button">
+                <span>Send Message</span>
+                <i class="ri-send-plane-line"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+      <i class="ri-checkbox-circle-line"></i>
+      <span>Your message was sent successfully.</span>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Akshat Choudhary. Built for AI, products, and ambitious teams.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Futuristic portrait illustration of Akshat Choudhary</title>
+  <desc id="desc">A premium AI engineer avatar with neon purple and cyan accents.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity=".58"/>
+      <stop offset="55%" stop-color="#4F46E5" stop-opacity=".34"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity=".08"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="111" y1="80" x2="557" y2="575" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA"/>
+      <stop offset=".48" stop-color="#5B7CFA"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="251" y1="196" x2="392" y2="410" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4C9A9"/>
+      <stop offset="1" stop-color="#BF765D"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="170" y1="405" x2="482" y2="595" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#26233A"/>
+      <stop offset=".48" stop-color="#5144B5"/>
+      <stop offset="1" stop-color="#151426"/>
+    </linearGradient>
+    <filter id="glow" x="16" y="15" width="608" height="608" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="16"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_7"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="20"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.462745 0 0 0 0 0.345098 0 0 0 0 1 0 0 0 0.65 0"/>
+      <feBlend mode="normal" in2="effect1_backgroundBlur_1_7" result="effect2_dropShadow_1_7"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1_7" result="shape"/>
+    </filter>
+    <clipPath id="clip">
+      <circle cx="320" cy="320" r="238"/>
+    </clipPath>
+  </defs>
+  <circle cx="320" cy="320" r="286" fill="url(#bg)"/>
+  <circle cx="320" cy="320" r="253" stroke="url(#ring)" stroke-width="8" stroke-dasharray="34 16" filter="url(#glow)"/>
+  <g clip-path="url(#clip)">
+    <rect x="82" y="82" width="476" height="476" fill="#12111E"/>
+    <path d="M66 152C161 112 230 142 310 114C415 78 504 102 594 171V594H66V152Z" fill="#19172A"/>
+    <path d="M110 232H528M90 320H548M117 408H522M211 98V560M320 82V580M429 100V558" stroke="#7C6DFF" stroke-opacity=".14" stroke-width="2"/>
+    <path d="M155 517C175 444 233 405 319 405C405 405 462 444 485 517C425 565 231 567 155 517Z" fill="url(#jacket)"/>
+    <path d="M253 424L319 527L386 424C365 406 341 398 319 398C296 398 274 406 253 424Z" fill="#F8FAFC"/>
+    <path d="M282 398H357V452C338 468 302 468 282 452V398Z" fill="#B97662"/>
+    <path d="M224 269C218 218 249 169 319 169C392 169 424 219 416 269L408 341C401 397 365 424 319 424C273 424 238 397 231 341L224 269Z" fill="url(#skin)"/>
+    <path d="M218 274C204 277 199 296 207 319C215 342 231 347 237 336L228 278L218 274Z" fill="#B97662"/>
+    <path d="M422 274C436 277 441 296 433 319C425 342 409 347 403 336L412 278L422 274Z" fill="#B97662"/>
+    <path d="M228 263C226 203 264 152 320 151C383 150 421 193 417 263C400 252 383 228 374 207C335 232 282 240 228 263Z" fill="#18131B"/>
+    <path d="M258 290C273 280 292 281 305 292M336 292C350 281 369 280 383 290" stroke="#201A25" stroke-width="8" stroke-linecap="round"/>
+    <path d="M292 350C313 363 334 363 354 350" stroke="#6E3C3E" stroke-width="7" stroke-linecap="round"/>
+    <path d="M320 300L309 336H331" stroke="#8D544A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M174 505C224 466 252 504 319 504C387 504 418 466 468 506V594H174V505Z" fill="#141322"/>
+    <path d="M214 463L290 568M427 462L350 568" stroke="#7C6DFF" stroke-opacity=".42" stroke-width="5"/>
+  </g>
+  <circle cx="486" cy="142" r="12" fill="#22D3EE"/>
+  <circle cx="130" cy="438" r="9" fill="#A78BFA"/>
+  <path d="M122 186L155 167L188 186V224L155 243L122 224V186Z" stroke="#22D3EE" stroke-opacity=".85" stroke-width="5"/>
+  <path d="M448 456L480 437L512 456V494L480 513L448 494V456Z" stroke="#A78BFA" stroke-opacity=".85" stroke-width="5"/>
+</svg>
